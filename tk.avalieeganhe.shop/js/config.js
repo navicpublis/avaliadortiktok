@@ -1,29 +1,10 @@
-/**
- * ============================================================
- *  CONFIG.JS — Centralize aqui todos os links e domínios
- * ============================================================
- *
- *  1. EXIT_URL      → domínio para o qual o usuário é redirecionado
- *                     ao tentar sair (botão voltar / popstate)
- *
- *  2. OFFER_URL     → link do botão "DESBLOQUEAR AGORA" na página
- *                     de vídeo e na página de cadastro
- *
- *  3. UPSELL_URL    → link da oferta de upsell
- *                     Configure esta URL como "página de obrigado"
- *                     na sua plataforma de pagamento (Hotmart, Kirvano, etc.)
- *                     O cliente será redirecionado automaticamente após pagar.
- *
- *  Substitua os valores abaixo pelos seus próprios links.
- */
-
 const CONFIG = {
-  // ⚠️ Troque pelo seu domínio de saída (exit intent)
-  EXIT_URL: 'https://comprasseguras.org.ua/c/c1f7efe8f5',
+  // Quando o usuário tentar sair, ele continua no seu site ou vai para a VSL
+  EXIT_URL: 'media/teste-vsl.html',
 
-  // ⚠️ Troque pelo link da sua oferta principal (botão DESBLOQUEAR)
-  OFFER_URL: 'https://comprasseguras.org.ua/c/c1f7efe8f5',
+  // Quando clicar em "Sacar" ou "Desbloquear", ele vai para a sua página de vídeo local
+  OFFER_URL: 'media/teste-vsl.html',
 
-  // ⚠️ Link da upsell — configure como "página de obrigado" na sua plataforma de pagamento
+  // Aqui você mantém o link de pagamento/final, pois isso geralmente é externo
   UPSELL_URL: 'https://ambienteeonline.org.ua/c/c478f99d5c',
 };

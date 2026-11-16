@@ -271,17 +271,21 @@ function setupWithdrawPage() {
     });
   });
 
+  // AQUI ESTÁ A MUDANÇA:
   document.querySelector('.withdraw-submit-btn').addEventListener('click', () => {
-    showPage('registration');
+    window.location.href = CONFIG.OFFER_URL; 
   });
 }
+
 
 // ── Setup: página de cadastro ──────────────────────────────────────────────
 function setupRegistrationPage() {
   document.querySelector('.withdraw-submit-btn').addEventListener('click', () => {
-    showPage('video');
+    // Em vez de mostrar a página de vídeo interna, vai direto para a sua VSL local
+    window.location.href = CONFIG.OFFER_URL;
   });
 }
+
 
 // ── Setup: página de vídeo ─────────────────────────────────────────────────
 function setupVideoPage() {
