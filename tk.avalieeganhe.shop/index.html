@@ -1,247 +1,65 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
-<!-- Mirrored from https://tk.avalieeganhe.shop/ by HTTrack Website Copier/3.x [XR&CO], Mon, 16 Nov 2026 01:06:43 GMT -->
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>TikTok — Conclua nossa pesquisa e ganhe até R$850</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TikTok — Conclua nossa pesquisa e ganhe até R$850</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com/">
-  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<style>
+body {
+  margin: 0;
+  background: #000;
+  color: white;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
 
-  <!-- Utmify -->
-  <script
-    src="../cdn.utmify.com.br/scripts/utms/latest.js"
-    data-utmify-prevent-xcod-sck
-    data-utmify-prevent-subids
-    async defer
-  ></script>
+.container {
+  width: 100%;
+  max-width: 900px;
+  padding: 20px;
+}
 
-  <!-- config.js para EXIT_URL -->
-  <script src="js/config.js"></script>
+video {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 0 30px rgba(255,255,255,0.1);
+  outline: none;
+}
 
-  <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-
-    body {
-      font-family: 'Poppins', sans-serif;
-      background: #fff;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    /* ── HEADER ── */
-    .site-header {
-      width: 100%;
-      border-bottom: 1px solid #e8e8e8;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 14px 20px;
-      gap: 10px;
-    }
-
-    .site-header .tiktok-icon {
-      width: 32px;
-      height: 32px;
-    }
-
-    .site-header .brand-name {
-      font-size: 22px;
-      font-weight: 700;
-      color: #111;
-      letter-spacing: -0.3px;
-    }
-
-    /* ── MAIN ── */
-    .main-content {
-      width: 100%;
-      max-width: 480px;
-      padding: 40px 20px 32px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 24px;
-    }
-
-    /* ── CARD ROXO ── */
-    .promo-card {
-      width: 100%;
-      background: linear-gradient(145deg, #9b40d8 0%, #7c2cbf 60%, #6a1fa8 100%);
-      border-radius: 20px;
-      padding: 24px 20px 28px;
-      color: #fff;
-    }
-
-    .promo-date {
-      display: inline-block;
-      background: rgba(255,255,255,0.22);
-      border-radius: 999px;
-      padding: 4px 14px;
-      font-size: 12px;
-      font-weight: 600;
-      margin-bottom: 16px;
-    }
-
-    .promo-title {
-      font-size: 28px;
-      font-weight: 800;
-      line-height: 1.25;
-      margin-bottom: 24px;
-    }
-
-    .promo-title .highlight {
-      color: #ffc107;
-    }
-
-    /* ── FORM DENTRO DO CARD ── */
-    .email-form {
-      background: #fff;
-      border-radius: 12px;
-      padding: 18px 16px 20px;
-    }
-
-    .email-form label {
-      display: block;
-      font-size: 14px;
-      font-weight: 700;
-      color: #111;
-      margin-bottom: 10px;
-    }
-
-    .email-form input[type="email"] {
-      width: 100%;
-      padding: 13px 14px;
-      border: 1.5px solid #ddd;
-      border-radius: 8px;
-      font-size: 14px;
-      font-family: 'Poppins', sans-serif;
-      color: #333;
-      outline: none;
-      margin-bottom: 12px;
-      transition: border-color 0.2s;
-    }
-
-    .email-form input[type="email"]:focus {
-      border-color: #fe2c55;
-    }
-
-    .email-form input[type="email"]::placeholder {
-      color: #bbb;
-    }
-
-    .access-btn {
-      display: block;
-      width: 100%;
-      background: #fe2c55;
-      color: #fff;
-      border: none;
-      border-radius: 8px;
-      padding: 14px;
-      font-size: 15px;
-      font-weight: 700;
-      cursor: pointer;
-      font-family: 'Poppins', sans-serif;
-      transition: background 0.2s, transform 0.1s;
-    }
-
-    .access-btn:hover  { background: #e0244a; }
-    .access-btn:active { transform: scale(0.98); }
-
-    /* ── FOOTER TERMS ── */
-    .terms-footer {
-      font-size: 12px;
-      color: #999;
-      text-align: center;
-      line-height: 1.6;
-      padding: 0 10px;
-    }
-
-    .terms-footer a { color: #777; }
-
-    /* ── DIVIDER ── */
-    .footer-divider {
-      width: 100%;
-      max-width: 480px;
-      border: none;
-      border-top: 1px solid #eee;
-      margin: 0;
-    }
-  </style>
+h1 {
+  font-size: 22px;
+  margin-bottom: 20px;
+  font-weight: normal;
+  color: #ccc;
+}
+</style>
 </head>
 
 <body>
 
-  <!-- HEADER -->
-  <header class="site-header">
-    <!-- Ícone TikTok -->
-    <svg class="tiktok-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
-      <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.75a4.85 4.85 0 0 1-1.01-.06z" fill="#111"/>
-    </svg>
-    <span class="brand-name">TikTok</span>
-  </header>
+<div class="container">
+  <h1 style="margin-bottom: 20px; color: #ccc; font-size: 22px;">Assista ao vídeo para continuar:</h1>
+  <video id="vsl" controls playsinline preload="metadata" style="width: 100%; border-radius: 12px; box-shadow: 0 0 30px rgba(255,255,255,0.1);">
+    <source src="media/vsl.mp4" type="video/mp4">
+    Seu navegador não suporta vídeos.
+  </video>
+  <div id="cta-container" style="display: none; margin-top: 20px;">
+    <a href="https://google.com" style="display: inline-block; padding: 15px 30px; background: #fe2c55; color: white; text-decoration: none; font-weight: bold; border-radius: 5px; font-size: 18px;">CONTINUAR PARA A PESQUISA &rarr;</a>
+  </div>
+</div>
 
-  <!-- MAIN -->
-  <main class="main-content">
+<script>
+  const video = document.getElementById('vsl');
+  const cta = document.getElementById('cta-container');
+  video.onended = function() {
+    cta.style.display = 'block';
+  };
+</script>
 
-    <!-- Card roxo -->
-    <div class="promo-card">
-      <span class="promo-date">01 de jan - 01 de dez</span>
-      <h1 class="promo-title">
-        Conclua nossa pesquisa e ganhe até <span class="highlight">R$850</span> em recompensas
-      </h1>
-
-      <!-- Formulário -->
-      <div class="email-form">
-        <label for="user-email">Insira o seu e-mail para acessar</label>
-        <input
-          type="email"
-          id="user-email"
-          placeholder="Digite o seu e-mail"
-          autocomplete="email"
-        >
-        <button class="access-btn" id="access-btn">Acessar</button>
-      </div>
-    </div>
-
-    <hr class="footer-divider">
-
-    <!-- Termos -->
-    <p class="terms-footer">
-      Ao participar das atividades de recompensa, você<br>
-      concorda com nossos <a href="#">Termos e Condições</a>.
-    </p>
-
-  </main>
-
-  <script>
-    // Exit intent
-    (function () {
-      history.pushState({}, '', location.href);
-      history.pushState({}, '', location.href);
-      history.pushState({}, '', location.href);
-      window.addEventListener('popstate', function () {
-        setTimeout(function () {
-          window.location.replace(CONFIG.EXIT_URL);
-        }, 1);
-      });
-    })();
-
-    // Botão Acessar → vai para o quiz (index.html) preservando UTMs
-    document.getElementById('access-btn').addEventListener('click', function () {
-      var email = document.getElementById('user-email').value.trim();
-      var qs    = window.location.search || '';
-      var dest  = 'quiz.html' + (qs || '');
-      window.location.href = dest;
-    });
-  </script>
-
-<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092" integrity="sha512-UKNk8GbxkABxKcXYuLkO16EleLGUkcvJWtpSNmExE0Too3ZaFAxTscNWEc1OdAv5/BikHawapSCaiD2XCmp+Bw==" data-cf-beacon='{"version":"2024.11.0","token":"eec7905c33fa48f29199674d4be7c643","r":1,"spa":2}' crossorigin="anonymous"></script>
 </body>
-
-<!-- Mirrored from https://tk.avalieeganhe.shop/ by HTTrack Website Copier/3.x [XR&CO], Mon, 16 Nov 2026 01:06:43 GMT -->
 </html>
