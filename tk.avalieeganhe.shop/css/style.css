@@ -91,7 +91,7 @@ body {
   text-align: center;
 }
 
-/* Botão SACAR */
+/* BotÃ£o SACAR */
 .sacar-btn {
   background: #fe2c55;
   color: #fff;
@@ -148,7 +148,7 @@ body {
   text-align: center;
 }
 
-/* ── OPTIONS ── */
+/* â”€â”€ OPTIONS â”€â”€ */
 .options-container {
   display: flex;
   flex-direction: column;
@@ -225,7 +225,7 @@ body {
   transform: rotate(45deg);
 }
 
-/* ── CONTINUE BUTTON ── */
+/* â”€â”€ CONTINUE BUTTON â”€â”€ */
 .continue-btn {
   display: block;
   width: 100%;
@@ -256,7 +256,7 @@ body {
 .continue-btn:not(:disabled):hover  { background: #e0244a; }
 .continue-btn:not(:disabled):active { transform: scale(0.98); }
 
-/* Texto bônus verde */
+/* Texto bÃ´nus verde */
 .bonus-text {
   text-align: center;
   font-size: 13px;
@@ -271,7 +271,7 @@ body {
   margin: 0 0 12px;
 }
 
-/* Termos no rodapé */
+/* Termos no rodapÃ© */
 .quiz-terms {
   text-align: center;
   font-size: 12px;
@@ -319,7 +319,7 @@ body {
   to   { transform: scale(1);   opacity: 1; }
 }
 
-/* "Nova recompensa" — verde, negrito */
+/* "Nova recompensa" â€” verde, negrito */
 .reward-nova-title {
   font-size: 20px;
   font-weight: 700;
@@ -327,7 +327,7 @@ body {
   margin-bottom: 10px;
 }
 
-/* "Você ganhou" — cinza claro */
+/* "VocÃª ganhou" â€” cinza claro */
 .reward-voce-ganhou {
   font-size: 15px;
   font-weight: 400;
@@ -335,7 +335,7 @@ body {
   margin-bottom: 8px;
 }
 
-/* Valor — verde grande */
+/* Valor â€” verde grande */
 .reward-amount {
   font-size: 52px;
   font-weight: 800;
@@ -353,7 +353,7 @@ body {
   display: inline-block;
 }
 
-/* Subtítulo */
+/* SubtÃ­tulo */
 .reward-subtitle {
   font-size: 13px;
   color: #888;
@@ -361,7 +361,7 @@ body {
   margin-bottom: 24px;
 }
 
-/* Botão preto arredondado */
+/* BotÃ£o preto arredondado */
 .continue-reward-btn {
   display: flex;
   align-items: center;

@@ -2,35 +2,17 @@
  * rewards.js — Distribuição e exibição das recompensas
  */
 
-const TOTAL_REWARD  = 559.51;
+const TOTAL_REWARD = 850;
 const NUM_QUESTIONS = 11;
 
-// Som de dinheiro (opcional — coloque um arquivo cash.mp3 em /media/)
+// Som de dinheiro
 const moneySound = new Audio('media/cash.mp3');
 moneySound.volume = 0.6;
 
-// Gera distribuição aleatória que soma exatamente TOTAL_REWARD
+// Gera distribuição fixa para somar exatamente 850
 function generateRewards() {
-  const rewards = [];
-  let remainingTotal     = TOTAL_REWARD;
-  let remainingQuestions = NUM_QUESTIONS;
-
-  for (let i = 0; i < NUM_QUESTIONS; i++) {
-    if (i === NUM_QUESTIONS - 1) {
-      rewards.push(Math.round(remainingTotal * 100) / 100);
-    } else {
-      const max    = (remainingTotal / remainingQuestions) * 1.5;
-      const min    = (remainingTotal / remainingQuestions) * 0.5;
-      const reward = Math.round(getRandomNumber(min, max) * 100) / 100;
-      rewards.push(reward);
-      remainingTotal     -= reward;
-      remainingQuestions--;
-    }
-  }
-
-  const shuffled = shuffleArray(rewards.slice(0, -1));
-  shuffled.push(rewards[rewards.length - 1]);
-  return shuffled;
+  const rewardPerQuestion = TOTAL_REWARD / NUM_QUESTIONS;
+  return new Array(NUM_QUESTIONS).fill(rewardPerQuestion);
 }
 
 // Referências ao DOM
@@ -48,6 +30,7 @@ let totalEarned = 0;
 
 // Anima contagem de número
 function animateValue(element, start, end, duration) {
+  if (!element) return;
   let startTimestamp = null;
   const step = (timestamp) => {
     if (!startTimestamp) startTimestamp = timestamp;
@@ -69,19 +52,19 @@ function showReward(questionIndex) {
   rewardModal.classList.add('active');
 
   setTimeout(() => {
-    startConfetti();
-    moneySound.play().catch(() => {}); // ignora erro se autoplay bloqueado
+    if (typeof startConfetti === 'function') startConfetti();
+    moneySound.play().catch(() => {}); 
     animateValue(rewardValue, 0, reward, 1000);
   }, 100);
 
   const rewardAmountEl = document.querySelector('#reward-modal .reward-amount');
-  if (rewardAmountEl) animateElement(rewardAmountEl, 'bounce');
+  if (rewardAmountEl && typeof animateElement === 'function') animateElement(rewardAmountEl, 'bounce');
 }
 
 // Esconde modal de recompensa
 function hideReward() {
   rewardModal.classList.remove('active');
-  stopConfetti();
+  if (typeof stopConfetti === 'function') stopConfetti();
 }
 
 // Exibe modal final
@@ -90,19 +73,19 @@ function showFinalReward() {
   finalModal.classList.add('active');
 
   setTimeout(() => {
-    startConfetti();
+    if (typeof startConfetti === 'function') startConfetti();
     moneySound.play().catch(() => {});
     animateValue(totalRewardEl, 0, TOTAL_REWARD, 2000);
   }, 100);
 
   const finalAmountEl = document.querySelector('#final-modal .reward-amount');
-  if (finalAmountEl) animateElement(finalAmountEl, 'bounce');
+  if (finalAmountEl && typeof animateElement === 'function') animateElement(finalAmountEl, 'bounce');
 }
 
 // Esconde modal final
 function hideFinalReward() {
   finalModal.classList.remove('active');
-  stopConfetti();
+  if (typeof stopConfetti === 'function') stopConfetti();
 }
 
 // Event listeners
