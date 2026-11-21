@@ -2,7 +2,7 @@
  * rewards.js — Distribuição e exibição das recompensas
  */
 
-const TOTAL_REWARD = 850;
+const TOTAL_REWARD = 559.51;
 const NUM_QUESTIONS = 11;
 
 // Som de dinheiro
